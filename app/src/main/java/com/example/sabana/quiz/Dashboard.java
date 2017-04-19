@@ -20,7 +20,7 @@ import android.widget.Toast;
 public class Dashboard extends AppCompatActivity {
     protected Cursor cursor;
     DataHelper dbHelper;
-    Button mSubmit, mHelp;
+    Button mSubmit, mHelp, ton1, ton2;
     TextView mSoal, mClue;
     EditText mJawab;
     String mAnswer;
@@ -35,6 +35,7 @@ public class Dashboard extends AppCompatActivity {
             cursor.moveToPosition(0);
             mClue.setText(cursor.getString(2).toString());
             Toast.makeText(Dashboard.this, "BENAR", Toast.LENGTH_SHORT).show();
+            finish();
         } else {
             Toast.makeText(Dashboard.this, "SALAH", Toast.LENGTH_SHORT).show();
         }
@@ -87,6 +88,16 @@ public class Dashboard extends AppCompatActivity {
             public void onClick(View v) {
                 mAnswer = mJawab.getText().toString();
                 checkAnswer(mAnswer);
+            }
+        });
+
+        ton2 = (Button) findViewById(R.id.button2);
+        ton2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                finish();
             }
         });
     }
