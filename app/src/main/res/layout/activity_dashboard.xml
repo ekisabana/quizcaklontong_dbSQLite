@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context="com.example.sabana.quiz.Dashboard">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:text="Soal"
+            android:gravity="center"
+            android:textSize="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/soal"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:textSize="32dp"
+            android:text="Clue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/clue"
+            />
+
+        <EditText
+            android:gravity="center"
+            android:textSize="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Jawab"
+            android:ems="10"
+            android:id="@+id/jawab"
+            android:onClick="clear"/>
+
+        <Button
+            android:text="jawab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit" />
+
+        <Button
+            android:text="Bantuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/help" />
+    </LinearLayout>
+
+</LinearLayout>
